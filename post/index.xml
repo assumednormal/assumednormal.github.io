@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>assumednormal blog</title>
-    <link>https://www.assumednormal.com/</link>
-    <description>Recent content on assumednormal blog</description>
+    <title>Posts on assumednormal blog</title>
+    <link>https://www.assumednormal.com/post/</link>
+    <description>Recent content in Posts on assumednormal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.assumednormal.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.assumednormal.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
