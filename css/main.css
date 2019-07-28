@@ -30,12 +30,12 @@ main {
 
 .intro > h1 {
     color: #212121;
-    font-size: 12vh;
+    font-size: 5vh;
 }
 
 .intro > h2 {
     color: #757575;
-    font-size: 3vmin;
+    font-size: 3vh;
 }
 
 .intro > .profile {
