@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>404 Page not found</title>
+        <title>Negative R-Squared</title>
         
         <style>
 
@@ -61,6 +61,23 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
 
 
+
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+            extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+    });
+    </script>
+
  <meta name="generator" content="Hugo 0.56.0" />
         
 
@@ -85,7 +102,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">404 Page not found</a>
+                    <a class="navbar-brand visible-xs" href="#">Negative R-Squared</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -132,13 +149,93 @@
 
 <main>
 
-    <div class="intro">
+    <div class="item">
 
-        <h1>¯\_(ツ)_/¯</h1>
+    
+    
+    
 
-        <h2>Page not found</h2>
+    
+    
 
-    </div>
+    <h4><a href="/post/negative-r-squared/">Negative R-Squared</a></h4>
+    <h5>July 30, 2019</h5>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p>The coefficient of determination is typically written as $\textrm{R}^2=1-\textrm{SS}_{\textrm{res}}/\textrm{SS}_{\textrm{tot}}$. But there are a few assumptions behind the simple formula that lead to nonsensical results when violated.</p>
+
+<p>Suppose you fit a simple linear regression on some data set. If the independent and dependent variables have non-zero means, the intercept will necessarily be non-zero. If you force the intercept to zero, the $\textrm{R}^2$ of the fitted line may be less than zero.</p>
+
+<pre><code class="language-r">library(dplyr)
+
+set.seed(7)
+
+d &lt;- data.frame(x = rnorm(100)) %&gt;%
+  mutate(y = 10 + x + rnorm(n()))
+
+rsq &lt;- function(y, y_hat) {
+  ss_tot &lt;- sum((y - mean(y))^2)
+  ss_res &lt;- sum((y - y_hat)^2)
+  return(1 - ss_res / ss_tot)
+}
+
+full_model &lt;- lm(y ~ x, data = d)
+rsq(d$y, fitted(full_model))
+# [1] 0.5100709
+
+no_intercept_model &lt;- lm(y ~ -1 + x, data = d)
+rsq(d$y, fitted(no_intercept_model))
+# [1] -54.70656
+</code></pre>
+
+<p>There are two violated assumptions in this example: (i) the residuals have non-zero mean and (ii) the residuals are correlated with the independent variable, $x$.</p>
+
+<pre><code class="language-r">round(cor(d$x, resid(full_model)), 2)
+# [1] 0
+round(cor(d$x, resid(no_intercept_model)), 2)
+# [1] -0.84
+
+round(mean(resid(full_model), 2))
+# [1] 0
+round(mean(resid(no_intercept_model), 2))
+# [1] 10
+</code></pre>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "assumednormal" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
 
 </main>
 
