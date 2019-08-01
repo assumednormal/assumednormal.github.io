@@ -6,10 +6,22 @@
     <description>Recent content in Posts on assumednormal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.assumednormal.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Finite Population Correction</title>
+      <link>https://www.assumednormal.com/post/finite-population-correction/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.assumednormal.com/post/finite-population-correction/</guid>
+      <description>Suppose there are $N$ individuals in a population. We take a sample of $n$ individuals without replacement and measure their heights, $h_i$, $i=1,\ldots,n$. Let $Z_i$ be the (random) indicator for the $i^{\textrm{th}}$ individual being included in the sample.
+We can write down the population mean and variance.
+$$ \begin{align} \mu &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}h_i\newline &amp;amp;\phantom{=} \newline \sigma^2 &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}\left(h_i-\mu\right)^2\newline &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}\left(h_i^2-2\mu h_i+\mu^2\right)\newline &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}h_i^2-\mu^2\newline &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}h_i^2-\frac{1}{N^2}\sum_{i=1}^{N}\sum_{j=1}^{N}h_ih_j\newline \end{align} $$
+We can write down the sample mean as well.</description>
+    </item>
     
     <item>
       <title>Negative R-Squared</title>
