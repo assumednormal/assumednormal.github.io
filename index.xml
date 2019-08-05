@@ -17,10 +17,8 @@
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.assumednormal.com/post/finite-population-correction/</guid>
-      <description>Suppose there are $N$ individuals in a population. We take a sample of $n$ individuals without replacement and measure their heights, $h_i$, $i=1,\ldots,n$. Let $Z_i$ be the (random) indicator for the $i^{\textrm{th}}$ individual being included in the sample.
-We can write down the population mean and variance.
-$$ \begin{align} \mu &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}h_i\newline &amp;amp;\phantom{=} \newline \sigma^2 &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}\left(h_i-\mu\right)^2\newline &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}\left(h_i^2-2\mu h_i+\mu^2\right)\newline &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}h_i^2-\mu^2\newline &amp;amp;= \frac{1}{N}\sum_{i=1}^{N}h_i^2-\frac{1}{N^2}\sum_{i=1}^{N}\sum_{j=1}^{N}h_ih_j\newline \end{align} $$
-We can write down the sample mean as well.</description>
+      <description>When sampling with replacement from finite populations, we have to change how we think about sampling from the larger population. Now what we measure on each sampled individual is fixed: a person&amp;rsquo;s height and weight, a family&amp;rsquo;s annual income, etc. What is considered random is whether or not each individual is selected for inclusion in the sample.
+Suppose there are $N$ individuals in a population. We take a sample of $n$ individuals without replacement and measure their heights, $h_i$, $i=1,\ldots,n$.</description>
     </item>
     
     <item>
