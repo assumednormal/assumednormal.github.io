@@ -6,10 +6,20 @@
     <description>Recent content in Posts on assumednormal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.assumednormal.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Predictor Variance Reduces Standard Error of Slopes</title>
+      <link>https://www.assumednormal.com/post/predictor-variance-reduces-standard-error-of-slopes/</link>
+      <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.assumednormal.com/post/predictor-variance-reduces-standard-error-of-slopes/</guid>
+      <description>A common solution to moderate degradation in marketing or risk models is to re-fit the same model on newer vintages. This approach has at least two benefits.
+ Modelers can open the original model fitting code, drop in the new data set, and be done with the re-fit in a few hours. The original model would have gone through a comprehensive review of methodology, performance, and implementation. Having followed the same methodology, all that would be left to review is performance and implementation.</description>
+    </item>
     
     <item>
       <title>Finite Population Correction</title>
