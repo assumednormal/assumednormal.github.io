@@ -78,7 +78,7 @@
     });
     </script>
 
- <meta name="generator" content="Hugo 0.56.0" />
+ <meta name="generator" content="Hugo 0.62.2" />
         
 
         
@@ -164,44 +164,38 @@
 
 
     <br> <div class="text-justify"><p>The coefficient of determination is typically written as $\textrm{R}^2=1-\textrm{SS}_{\textrm{res}}/\textrm{SS}_{\textrm{tot}}$. But there are a few assumptions behind the simple formula that lead to nonsensical results when violated.</p>
-
 <p>Suppose you fit a simple linear regression on some data set. If the independent and dependent variables are not proportional, the intercept will necessarily be non-zero. If you force the intercept to zero, the $\textrm{R}^2$ of the fitted line may be less than zero.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(dplyr)
 
-<pre><code class="language-r">library(dplyr)
+<span style="color:#a6e22e">set.seed</span>(<span style="color:#ae81ff">7</span>)
 
-set.seed(7)
+d <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>)) <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#a6e22e">mutate</span>(y <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> x <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#a6e22e">n</span>()))
 
-d &lt;- data.frame(x = rnorm(100)) %&gt;%
-  mutate(y = 10 + x + rnorm(n()))
-
-rsq &lt;- function(y, y_hat) {
-  ss_tot &lt;- sum((y - mean(y))^2)
-  ss_res &lt;- sum((y - y_hat)^2)
-  return(1 - ss_res / ss_tot)
+rsq <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(y, y_hat) {
+  ss_tot <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sum</span>((y <span style="color:#f92672">-</span> <span style="color:#a6e22e">mean</span>(y))^2)
+  ss_res <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sum</span>((y <span style="color:#f92672">-</span> y_hat)^2)
+  <span style="color:#a6e22e">return</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> ss_res <span style="color:#f92672">/</span> ss_tot)
 }
 
-full_model &lt;- lm(y ~ x, data = d)
-rsq(d$y, fitted(full_model))
-# [1] 0.5100709
+full_model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(y <span style="color:#f92672">~</span> x, data <span style="color:#f92672">=</span> d)
+<span style="color:#a6e22e">rsq</span>(d<span style="color:#f92672">$</span>y, <span style="color:#a6e22e">fitted</span>(full_model))
+<span style="color:#75715e"># [1] 0.5100709</span>
 
-no_intercept_model &lt;- lm(y ~ -1 + x, data = d)
-rsq(d$y, fitted(no_intercept_model))
-# [1] -54.70656
-</code></pre>
+no_intercept_model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(y <span style="color:#f92672">~</span> <span style="color:#ae81ff">-1</span> <span style="color:#f92672">+</span> x, data <span style="color:#f92672">=</span> d)
+<span style="color:#a6e22e">rsq</span>(d<span style="color:#f92672">$</span>y, <span style="color:#a6e22e">fitted</span>(no_intercept_model))
+<span style="color:#75715e"># [1] -54.70656</span>
+</code></pre></div><p>There are two violated assumptions in this example: (i) the residuals have non-zero mean and (ii) the residuals are correlated with the independent variable, $x$.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">cor</span>(d<span style="color:#f92672">$</span>x, <span style="color:#a6e22e">resid</span>(full_model)), <span style="color:#ae81ff">2</span>)
+<span style="color:#75715e"># [1] 0</span>
+<span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">cor</span>(d<span style="color:#f92672">$</span>x, <span style="color:#a6e22e">resid</span>(no_intercept_model)), <span style="color:#ae81ff">2</span>)
+<span style="color:#75715e"># [1] -0.84</span>
 
-<p>There are two violated assumptions in this example: (i) the residuals have non-zero mean and (ii) the residuals are correlated with the independent variable, $x$.</p>
-
-<pre><code class="language-r">round(cor(d$x, resid(full_model)), 2)
-# [1] 0
-round(cor(d$x, resid(no_intercept_model)), 2)
-# [1] -0.84
-
-round(mean(resid(full_model), 2))
-# [1] 0
-round(mean(resid(no_intercept_model), 2))
-# [1] 10
-</code></pre>
-</div>
+<span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">mean</span>(<span style="color:#a6e22e">resid</span>(full_model), <span style="color:#ae81ff">2</span>))
+<span style="color:#75715e"># [1] 0</span>
+<span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">mean</span>(<span style="color:#a6e22e">resid</span>(no_intercept_model), <span style="color:#ae81ff">2</span>))
+<span style="color:#75715e"># [1] 10</span>
+</code></pre></div></div>
 
     
     
@@ -239,7 +233,7 @@ round(mean(resid(no_intercept_model), 2))
 
         <footer>
 
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        

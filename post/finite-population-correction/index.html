@@ -78,7 +78,7 @@
     });
     </script>
 
- <meta name="generator" content="Hugo 0.56.0" />
+ <meta name="generator" content="Hugo 0.62.2" />
         
 
         
@@ -163,12 +163,9 @@
 </div>
 
 
-    <br> <div class="text-justify"><p>When sampling with replacement from finite populations, we have to change how we think about sampling from the larger population. Now what we measure on each sampled individual is fixed: a person&rsquo;s height and weight, a family&rsquo;s annual income, etc. What is considered random is whether or not each individual is selected for inclusion in the sample.</p>
-
+    <br> <div class="text-justify"><p>When sampling with replacement from finite populations, we have to change how we think about sampling from the larger population. Now what we measure on each sampled individual is fixed: a person's height and weight, a family's annual income, etc. What is considered random is whether or not each individual is selected for inclusion in the sample.</p>
 <p>Suppose there are $N$ individuals in a population. We take a sample of $n$ individuals without replacement and measure their heights, $h_i$, $i=1,\ldots,n$. Let $Z_i$ be the (random) indicator for the $i^{\textrm{th}}$ individual being included in the sample.</p>
-
 <p>We can write down the population mean and variance.</p>
-
 <p>$$
 \begin{align}
 \mu &amp;= \frac{1}{N}\sum_{i=1}^{N}h_i\newline
@@ -179,15 +176,10 @@
 &amp;= \frac{1}{N}\sum_{i=1}^{N}h_i^2-\frac{1}{N^2}\sum_{i=1}^{N}\sum_{j=1}^{N}h_ih_j\newline
 \end{align}
 $$</p>
-
 <p>We can write down the sample mean as well.</p>
-
 <p>$$\bar{H}=\frac{1}{n}\sum_{i=1}^{N}h_iZ_i$$</p>
-
 <p>The sample variance is less obvious.</p>
-
 <p>The $Z_i$ are apparently Bernoulli distributed with parameter $p=n/N$. The sample size is fixed at $n$ though, so there must be a negative correlation between $Z_i$ and $Z_j$, for $i, j\in\left[1,\ldots,n\right]$ and $i\neq j$.</p>
-
 <p>$$
 \begin{align}
 \mathbb{V}\left[\bar{H}\right] &amp;= \frac{1}{n^2}\mathbb{V}\left[\sum_{i=1}^{N}h_iZ_i\right]\newline
@@ -195,15 +187,13 @@ $$</p>
 &amp;= \frac{1}{n^2}\sum_{i=1}^{N}\sum_{j=1}^{N}h_ih_j\left(\mathbb{E}\left[Z_iZ_j\right]-\frac{n^2}{N^2}\right)\newline
 \end{align}
 $$</p>
-
 <p>Notice that $Z_iZ_j=1$ when both individuals $i$ and $j$ are in the sample. Otherwise $Z_iZ_j=0$. There are $\binom{N}{n}$ possible samples we could have selected. When $i\neq j$, $\binom{N-2}{n-2}$ samples contain both individuals $i$ and $j$.</p>
-
 <p>$$
 \begin{align}
 \mathbb{V}\left[\bar{H}\right] &amp;= \frac{1}{n^2}\left(\sum_{i=1}^{N}\sum_{j\neq i}^{N}h_ih_j\left(\frac{n\left(n-1\right)}{N\left(N-1\right)}-\frac{n^2}{N^2}\right)+\sum_{i=1}^{N}h_i^2\frac{n\left(N-n\right)}{N^2}\right)\newline
 &amp;= \frac{N-n}{N-1}\frac{1}{n}\left(\sum_{i=1}^{N}\sum_{j\neq i}^{N}h_ih_j\frac{-1}{N^2}+\sum_{i=1}^{N}h_i^2\frac{N-1}{N^2}\right)\newline
 &amp;= \frac{N-n}{N-1}\frac{1}{n}\left(\frac{-1}{N^2}\sum_{i=1}^{N}\sum_{j=1}^{N}h_ih_j+\frac{1}{N}\sum_{i=1}^{N}h_i^2\right)\newline
-&amp;= \underbrace{\frac{N-n}{N-1}}_{\textrm{FPC}}\frac{\sigma^2}{n}<br />
+&amp;= \underbrace{\frac{N-n}{N-1}}_{\textrm{FPC}}\frac{\sigma^2}{n}\<br>
 \end{align}
 $$</p>
 </div>
@@ -244,7 +234,7 @@ $$</p>
 
         <footer>
 
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        
