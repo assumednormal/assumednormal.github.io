@@ -6,10 +6,19 @@
     <description>Recent content on assumednormal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.assumednormal.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NJ Scratch Offs</title>
+      <link>https://www.assumednormal.com/post/nj-scratch-offs/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.assumednormal.com/post/nj-scratch-offs/</guid>
+      <description>NJ is one of only a few states that reports the number of tickets remaining at each prize level for each scratch off game each day. Assuming that the proportion of $0 tickets remaining is the same as the second most frequent prize level and that a prize of a free ticket is immediately exchanged for a new ticket, we can calculate the expected value of the next ticket purchased.</description>
+    </item>
     
     <item>
       <title>Predictor Variance Reduces Standard Error of Slopes</title>
