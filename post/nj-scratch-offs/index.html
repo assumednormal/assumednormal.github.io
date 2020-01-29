@@ -186,7 +186,7 @@
                     }, 0)) / 100;
                     return game;
                 });
-                var tableRows = "<table><tr><th>Game ID</th><th>Game Name</th><th>Ticket Cost</th><th>Expected Value</th></tr>" +
+                var tableRows = "<table class='table table-striped'><tr><th>Game ID</th><th>Game Name</th><th>Ticket Cost</th><th>Expected Value</th></tr>" +
                     enrichedGames.sort(function(game1, game2) {
                         if ((game1.expectedValue - game1.ticketPrice / 100) > (game2.expectedValue - game2.ticketPrice / 100)) {
                             return -1;
