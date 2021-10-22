@@ -5,50 +5,6 @@
     <link>https://www.assumednormal.com/</link>
     <description>Recent content on assumednormal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.assumednormal.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>NJ Scratch Offs</title>
-      <link>https://www.assumednormal.com/post/nj-scratch-offs/</link>
-      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.assumednormal.com/post/nj-scratch-offs/</guid>
-      <description>NJ is one of only a few states that reports the number of tickets remaining at each prize level for each scratch off game each day. Assuming that the proportion of $0 tickets remaining is the same as the second most frequent prize level and that a prize of a free ticket is immediately exchanged for a new ticket, we can calculate the expected value of the next ticket purchased.</description>
-    </item>
-    
-    <item>
-      <title>Predictor Variance Reduces Standard Error of Slopes</title>
-      <link>https://www.assumednormal.com/post/predictor-variance-reduces-standard-error-of-slopes/</link>
-      <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.assumednormal.com/post/predictor-variance-reduces-standard-error-of-slopes/</guid>
-      <description>A common solution to moderate degradation in marketing or risk models is to re-fit the same model on newer vintages. This approach has at least two benefits.
- Modelers can open the original model fitting code, drop in the new data set, and be done with the re-fit in a few hours. The original model would have gone through a comprehensive review of methodology, performance, and implementation. Having followed the same methodology, all that would be left to review is performance and implementation.</description>
-    </item>
-    
-    <item>
-      <title>Finite Population Correction</title>
-      <link>https://www.assumednormal.com/post/finite-population-correction/</link>
-      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.assumednormal.com/post/finite-population-correction/</guid>
-      <description>When sampling with replacement from finite populations, we have to change how we think about sampling from the larger population. Now what we measure on each sampled individual is fixed: a person&#39;s height and weight, a family&#39;s annual income, etc. What is considered random is whether or not each individual is selected for inclusion in the sample.
-Suppose there are $N$ individuals in a population. We take a sample of $n$ individuals without replacement and measure their heights, $h_i$, $i=1,\ldots,n$.</description>
-    </item>
-    
-    <item>
-      <title>Negative R-Squared</title>
-      <link>https://www.assumednormal.com/post/negative-r-squared/</link>
-      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.assumednormal.com/post/negative-r-squared/</guid>
-      <description>The coefficient of determination is typically written as $\textrm{R}^2=1-\textrm{SS}_{\textrm{res}}/\textrm{SS}_{\textrm{tot}}$. But there are a few assumptions behind the simple formula that lead to nonsensical results when violated.
-Suppose you fit a simple linear regression on some data set. If the independent and dependent variables are not proportional, the intercept will necessarily be non-zero. If you force the intercept to zero, the $\textrm{R}^2$ of the fitted line may be less than zero.</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://www.assumednormal.com/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
