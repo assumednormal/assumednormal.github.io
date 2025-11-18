@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{TITLE}} - assumednormal</title>
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Prism.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44194112-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-44194112-6');
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="/">assumednormal</a></h1>
+        <nav>
+            <a href="/">Home</a> | 
+            <a href="/posts/">Posts</a> | 
+            <a href="/links.html">Links</a>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <header>
+                <h1>{{TITLE}}</h1>
+                <div class="meta">{{DATE}}</div>
+            </header>
+            
+            <div class="content">
+                <p>Your post content goes here.</p>
+            </div>
+        </article>
+    </main>
+    
+    <footer>
+        <p><a href="mailto:max@assumednormal.com">max@assumednormal.com</a></p>
+    </footer>
+</body>
+</html>
+
