@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Example Post - assumednormal</title>
+    <title>CarMax-Carvana Arbitrage - assumednormal</title>
     <link rel="stylesheet" href="/css/main.css">
     
     <!-- Prism.js for syntax highlighting -->
@@ -45,34 +45,27 @@
     <main>
         <article>
             <header>
-                <h1>Example Post</h1>
-                <div class="meta">2025-01-15</div>
+                <h1>CarMax-Carvana Arbitrage</h1>
+                <div class="meta">2025-11-24</div>
             </header>
             
             <div class="content">
-                <p>This is an example blog post demonstrating the minimal blog structure.</p>
-                
-                <h2>Math Support</h2>
-                <p>Inline math: $E = mc^2$</p>
-                <p>Display math:</p>
-                <p>$$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$</p>
-                
-                <h2>Code Support</h2>
-                <p>Here's some inline code: <code>print("Hello, world!")</code></p>
-                <p>And a code block:</p>
-                <pre><code class="language-python">def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
-
-for i in range(10):
-    print(fibonacci(i))</code></pre>
-                
-                <h2>Images</h2>
-                <p>Images can be included like this:</p>
-                <!-- <img src="/images/example.jpg" alt="Example image"> -->
-                
-                <p>That's all for now!</p>
+                <p>A friend recently shared this X post with me.</p>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I have a new side hustle<br><br>Bought a car for $8,900 from CarMax<br><br>Sold it for $12,000 to Carvana<br><br>I do this once a day and make about $90k a month <br><br>All with an hour a day each day <br><br>Why aren’t more people doing this?</p>&mdash; Chase Passive Income (@chasedownleads) <a href="https://twitter.com/chasedownleads/status/1992683535073718526?ref_src=twsrc%5Etfw">November 23, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>After sitting on it for a day, I decided to see how feasible it would be to identify these arbitrage opportunities.</p>
+                <h2>CarMax Listings</h2>
+                <p>CarMax's <i>Shop</i> page is pretty straightforward. I limited the search to cars within 25 miles of the Austin North store and sorted in ascending order by price.</p>
+                // python code to page through shop listings
+                <pre><code class="language-python">
+                    import requests
+                    import json
+                    import time
+                    
+                    def get_shop_listings(zip_code, radius, sort_by):
+                        url = f"https://www.carmax.com/cars/api/search/run?uri=%2Fcars&skip=0&take=24&zipCode={zip_code}&shipping=-1&sort={sort_by}&radius={radius}&visitorID=2fa60557-9e3e-44d8-88b5-05be493f7284"
+                        response = requests.get(url)
+                <h2>Carvana Offers</h2>
+                <h2>Putting Them Together</h2>
             </div>
         </article>
     </main>

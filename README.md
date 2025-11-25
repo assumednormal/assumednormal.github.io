@@ -20,6 +20,20 @@ This project uses `uv` for Python package management. To set up:
 uv sync
 ```
 
+## Local Development
+
+To preview the site locally in your browser:
+
+```bash
+python main.py
+```
+
+This starts a local web server at `http://localhost:8000/`. Open this URL in your browser to view the site. The server will automatically reload when you make changes to the files. Press `Ctrl+C` to stop the server.
+
+**Options:**
+- `--port <number>` - Specify a custom port (e.g., `python main.py --port 8080`)
+- `--auto-port` - Automatically try the next available port if the default port is in use
+
 ## Adding a New Post
 
 Use the `blog.py` CLI tool to create and publish posts:
