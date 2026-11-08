@@ -71,37 +71,28 @@ nav a.active {
 
 /* Hero */
 .hero {
-    padding: 72px 0 56px;
+    padding: 64px 0 48px;
 }
 
-.hero-layout {
-    display: flex;
-    align-items: flex-start;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
     gap: 48px;
-}
-
-.hero-copy {
-    flex: 1;
-    min-width: 0;
-}
-
-.hero-photo {
-    flex-shrink: 0;
-    width: 220px;
+    align-items: start;
 }
 
 .hero-photo img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
     display: block;
-    border-radius: 6px;
-    border: 1px solid var(--border);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 600;
-    line-height: 1.15;
+    line-height: 1.2;
     letter-spacing: -0.02em;
     margin-bottom: 16px;
 }
@@ -305,17 +296,17 @@ footer a:hover {
 }
 @media (max-width: 800px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
-    .hero-layout {
-        flex-direction: column;
-        gap: 28px;
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
-    .hero-photo {
-        width: 180px;
-        align-self: flex-start;
+    .hero-photo img {
+        width: 160px;
+        height: 160px;
     }
 
     header .container {
