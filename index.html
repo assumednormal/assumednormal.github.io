@@ -1,45 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>assumednormal</title>
-    <link rel="stylesheet" href="css/main.css">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44194112-6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-44194112-6');
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max | Data Advisory for Small Businesses</title>
+    <meta name="description" content="Helping local small businesses make better decisions with data. Advisory retainers and hands-on work in analytics, data science, and data engineering.">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
-        <h1><a href="/">assumednormal</a></h1>
-        <nav>
-            <a href="/" class="active">Home</a> | 
-            <a href="/posts/">Posts</a> | 
-            <a href="/links.html">Links</a>
-        </nav>
+        <div class="container">
+            <a href="/" class="logo">assumednormal</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/services.html">Services</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    
+
     <main>
-        <section class="about-me">
-            <p>Hi. I'm Max. I'm a data scientist by day. Outside of work, I like to hang out with my wife and two dogs. I also really enjoy scraping data and analyzing it.</p>
+        <section class="hero">
+            <div class="container">
+                <h1>Better decisions from your data.<br>Without a full-time data team.</h1>
+                <p class="lead">I help local small businesses get clear, trustworthy numbers and practical insights through ongoing advisory and focused project work.</p>
+                <div class="cta">
+                    <a href="/services.html" class="btn primary">See how it works</a>
+                    <a href="/contact.html" class="btn secondary">Start a conversation</a>
+                </div>
+            </div>
         </section>
-        
-        <h2>Recent Posts</h2>
-        <ul class="post-list">
-            <!-- Posts will be listed here -->
-            <li><a href="/posts/example-post.html">Example Post</a> <span class="date">2025-01-15</span></li>
-        </ul>
+
+        <section class="problem">
+            <div class="container">
+                <h2>Most small businesses already have the data. They just can’t use it.</h2>
+                <div class="grid three">
+                    <div>
+                        <h3>Conflicting numbers</h3>
+                        <p>Sales, finance, and operations each have their own version of the truth. Meetings start with “whose number is right?”</p>
+                    </div>
+                    <div>
+                        <h3>Manual reporting</h3>
+                        <p>Someone is still exporting spreadsheets every week. The numbers are late, fragile, and hard to trust.</p>
+                    </div>
+                    <div>
+                        <h3>No clear next step</h3>
+                        <p>You know data could help with forecasting, profitability, or marketing, but you’re not sure where to start or what to prioritize.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-overview">
+            <div class="container">
+                <h2>How I help</h2>
+                <p class="section-lead">A simple model: a monthly advisory retainer for direction and judgment, plus scoped project work when you need something built.</p>
+                <div class="grid three">
+                    <div class="card">
+                        <h3>Analytics & Decision Support</h3>
+                        <p>Define the metrics that matter, clean up reporting, and give leadership a single set of numbers they can trust.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Data Science & Machine Learning</h3>
+                        <p>Forecasting, customer segmentation, churn, demand prediction — only when the foundation is solid enough to support it.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Data & Analytics Engineering</h3>
+                        <p>Pipelines, warehouses, data quality, and integrations so the numbers stay reliable without constant manual work.</p>
+                    </div>
+                </div>
+                <p class="center"><a href="/services.html">Full details on services and pricing →</a></p>
+            </div>
+        </section>
+
+        <section class="who">
+            <div class="container">
+                <h2>A good fit if you…</h2>
+                <ul class="checklist">
+                    <li>Run a professional services firm, specialized trade, medical practice, or other local business with real data complexity</li>
+                    <li>Spend too much time reconciling numbers or waiting on reports</li>
+                    <li>Want senior judgment without hiring a full-time data person</li>
+                    <li>Prefer a clear monthly advisory relationship plus project work when needed</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <h2>Ready to get clearer numbers?</h2>
+                <p>Most engagements start with a short conversation about what you’re trying to decide or fix.</p>
+                <a href="/contact.html" class="btn primary">Get in touch</a>
+            </div>
+        </section>
     </main>
-    
+
     <footer>
-        <p><a href="mailto:max@assumednormal.com">max@assumednormal.com</a></p>
+        <div class="container">
+            <p>© <span id="year"></span> Max · assumednormal</p>
+            <p><a href="mailto:max@assumednormal.com">max@assumednormal.com</a></p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
-

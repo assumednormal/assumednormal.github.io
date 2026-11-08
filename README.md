@@ -1,50 +1,22 @@
-# assumednormal.github.io
+# assumednormal.com
 
-Minimal, text-only blog.
+Static site for Max’s data advisory practice.
 
 ## Structure
 
-- `index.html` - Home page with recent posts
-- `posts/` - Directory containing blog posts (HTML files)
-- `css/main.css` - Minimal stylesheet
-- `CNAME` - Custom domain configuration
-- `blog.py` - CLI tool for creating and publishing posts
-- `main.py` - Main entry point
-- `pyproject.toml` - Python project configuration
+- `index.html` — Home
+- `services.html` — Services and engagement model
+- `about.html` — About
+- `contact.html` — Contact
+- `css/style.css` — Styles
+- `CNAME` — Custom domain
 
-## Setup
+## Deployment
 
-This project uses `uv` for Python package management. To set up:
+This is a plain static site. To use it with GitHub Pages:
 
-```bash
-uv sync
-```
+1. Replace the contents of the `assumednormal.github.io` repository with these files.
+2. Keep the `CNAME` file if you want the custom domain (`www.assumednormal.com`).
+3. Push to the default branch. GitHub Pages will serve it.
 
-## Adding a New Post
-
-Use the `blog.py` CLI tool to create and publish posts:
-
-1. **Create a new post:**
-   ```bash
-   python blog.py new <post-name>
-   ```
-   This creates a new HTML file in the `posts/` directory from the template, automatically setting the date.
-
-2. **Edit the post:**
-   - Open the created file in `posts/<post-name>.html`
-   - Replace `{{TITLE}}` with your post title
-   - Add your content
-
-3. **Publish the post:**
-   ```bash
-   python blog.py publish posts/<post-name>.html
-   ```
-   This automatically adds the post to both `index.html` and `posts/index.html`, and limits the home page to the 5 most recent posts.
-
-## Features
-
-- Math support via MathJax (inline: `$...$`, display: `$$...$$`)
-- Code highlighting (basic styling, can be enhanced)
-- Minimal, text-only design
-- Google Analytics integration
-
+No build step required.

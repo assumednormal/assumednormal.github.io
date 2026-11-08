@@ -1,0 +1,286 @@
+/* Professional, understated design suitable for small business and professional services clients */
+
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #555;
+    --border: #e5e5e5;
+    --accent: #1e3a5f;
+    --accent-hover: #152a45;
+    --card-bg: #fafafa;
+    --max-width: 1100px;
+    --narrow: 720px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    font-size: 17px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.narrow {
+    max-width: var(--narrow);
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: #fff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--text);
+}
+
+/* Hero */
+.hero {
+    padding: 80px 0 60px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin-bottom: 32px;
+}
+
+.cta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.15s ease;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--border);
+}
+
+.btn.secondary:hover {
+    background: var(--card-bg);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.section-lead {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 640px;
+}
+
+.page-header {
+    padding: 60px 0 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Grids */
+.grid {
+    display: grid;
+    gap: 32px;
+}
+
+.grid.three {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card ul {
+    margin-left: 1.2rem;
+    margin-top: 8px;
+}
+
+.card li {
+    margin-bottom: 6px;
+}
+
+/* Lists */
+.checklist {
+    list-style: none;
+    max-width: 720px;
+}
+
+.checklist li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+}
+
+.checklist li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+ul {
+    margin: 1rem 0 1.5rem 1.4rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+/* CTA band */
+.cta-band {
+    background: var(--card-bg);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.cta-band h2 {
+    margin-bottom: 12px;
+}
+
+.cta-band p {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 32px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
