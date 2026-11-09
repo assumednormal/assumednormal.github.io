@@ -3,7 +3,7 @@
    Builds on theme.css. Designed for US Letter print / PDF export.
    ========================================================================== */
 
-@import url("theme.css");
+@import url("theme.css?v=2026110901");
 
 @page {
     size: Letter;

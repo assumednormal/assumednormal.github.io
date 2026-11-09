@@ -3,7 +3,7 @@
    Brand tokens and base type live in theme.css.
    ========================================================================== */
 
-@import url("theme.css");
+@import url("theme.css?v=2026110901");
 
 .container {
     max-width: 1040px;

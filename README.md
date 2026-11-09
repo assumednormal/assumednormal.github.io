@@ -28,6 +28,14 @@ Static site for Assumed Normal LLC, Max Mitchell’s data science & AI advisory 
 - **Mark:** a single bell-curve stroke (`assets/favicon.svg`; inline SVG in headers).
 - **Patterns:** small uppercase tracked labels (`.label`), hairline rules instead of boxes or shadows, square bullets (`ul.dash`), numbered sections (`01`, `02`…), no rounded corners.
 
+## Updating styles
+
+Stylesheet links carry a version tag (`css/style.css?v=2026110901`) so browsers never pair new pages with a cached old stylesheet. After changing any file in `css/`, bump the tag everywhere at once:
+
+```bash
+grep -rl 'v=2026110901' --include='*.html' --include='*.css' . | xargs sed -i 's/v=2026110901/v=NEWVERSION/g'
+```
+
 ## Client documents
 
 1. Copy `templates/document.html` (keep it next to `css/` so the stylesheet resolves).
