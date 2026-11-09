@@ -157,7 +157,9 @@
     margin-bottom: var(--s5);
 }
 
-.section-head h2 { margin: 0; }
+.section-head > * { min-width: 0; }
+
+.section-head > :first-child h2 { margin: 0; }
 
 .section-head > p {
     color: var(--ink-2);
@@ -432,17 +434,17 @@
 /* ---------- Contact ---------- */
 .contact-panel {
     border: 1px solid var(--ink);
-    padding: var(--s5);
+    padding: var(--s4);
     margin-bottom: var(--s5);
 }
 
 .contact-panel .email {
     display: inline-block;
-    font-size: var(--fs-lg);
+    font-size: clamp(0.8125rem, 4.4vw, var(--fs-md));
     font-weight: 600;
     letter-spacing: -0.02em;
     margin-bottom: var(--s3);
-    word-break: break-all;
+    white-space: nowrap;
 }
 
 /* ---------- CTA band ---------- */

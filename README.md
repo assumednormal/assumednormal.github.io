@@ -1,6 +1,6 @@
 # assumednormal.com
 
-Static site for Max Mitchell’s data science & AI advisory practice. No build step: GitHub Pages serves the files as-is.
+Static site for Assumed Normal LLC, Max Mitchell’s data science & AI advisory practice. No build step: GitHub Pages serves the files as-is.
 
 ## Structure
 
@@ -24,6 +24,7 @@ Static site for Max Mitchell’s data science & AI advisory practice. No build s
   - Ink `#0a0a0a` for text and solid fills
   - Secondary text `#3d3d3d`, muted `#6b6b6b`
   - Rules `#d9d9d9`, panels `#f4f4f4`, paper `#ffffff`
+- **Names:** “assumednormal” is the wordmark (logo, header). “Assumed Normal LLC” is the legal name: use it in copyright lines, contracts, invoices, and document letterheads.
 - **Mark:** a single bell-curve stroke (`assets/favicon.svg`; inline SVG in headers).
 - **Patterns:** small uppercase tracked labels (`.label`), hairline rules instead of boxes or shadows, square bullets (`ul.dash`), numbered sections (`01`, `02`…), no rounded corners.
 
