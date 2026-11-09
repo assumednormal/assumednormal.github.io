@@ -1,0 +1,172 @@
+/* ==========================================================================
+   assumednormal — client document styles (proposals, reports, SOWs)
+   Builds on theme.css. Designed for US Letter print / PDF export.
+   ========================================================================== */
+
+@import url("theme.css");
+
+@page {
+    size: Letter;
+    margin: 0.75in 0.8in 0.8in;
+}
+
+body {
+    background: var(--wash);
+    font-size: 10pt;
+    line-height: 1.6;
+}
+
+.doc {
+    max-width: 8.5in;
+    margin: 32px auto;
+    padding: 0.75in 0.8in;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+}
+
+/* Letterhead */
+.doc-letterhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 48px;
+}
+
+.doc-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 11pt;
+}
+
+.doc-contact {
+    text-align: right;
+    font-size: 7.5pt;
+    color: var(--ink-3);
+    line-height: 1.5;
+}
+
+/* Title block */
+.doc-title { margin-bottom: 40px; }
+
+.doc-title h1 {
+    font-size: 24pt;
+    margin-bottom: 4px;
+}
+
+.doc-subtitle {
+    color: var(--ink-2);
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+
+.doc-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+}
+
+.doc-meta div { padding: 8px 0; }
+
+.doc-meta dt {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-3);
+}
+
+.doc-meta dd { margin: 0; font-size: 9pt; }
+
+/* Sections */
+.doc section { margin-bottom: 28px; break-inside: avoid; }
+
+.doc h2 {
+    font-size: 12pt;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 12px;
+}
+
+.sec-num {
+    font-size: 8pt;
+    font-weight: 500;
+    color: var(--ink-3);
+    letter-spacing: 0.08em;
+}
+
+.doc .label { font-size: 7pt; margin-bottom: 8px; }
+
+.callout {
+    border-left: 3px solid var(--ink);
+    background: var(--wash);
+    padding: 12px 16px;
+    margin: 16px 0 0;
+}
+
+.callout .label { margin-bottom: 4px; }
+
+.doc table.data { font-size: 9pt; }
+.doc table.data th { font-size: 7pt; }
+.doc table.data .num { text-align: right; padding-right: 0; }
+.doc table.data tr.total td {
+    font-weight: 600;
+    border-top: 1.5px solid var(--ink);
+    border-bottom: 0;
+}
+
+.doc-steps {
+    margin: 0;
+    padding-left: 1.6em;
+}
+
+.doc-steps li { margin-bottom: 4px; padding-left: 4px; }
+.doc-steps li::marker { color: var(--ink-3); font-size: 8pt; }
+
+.doc-sign {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 48px;
+    font-size: 8pt;
+    color: var(--ink-3);
+}
+
+.doc-sign .line {
+    display: block;
+    height: 36px;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 6px;
+}
+
+.doc-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule);
+    font-size: 7pt;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+}
+
+@media print {
+    body { background: var(--paper); }
+    .doc { margin: 0; padding: 0; border: 0; max-width: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media (max-width: 720px) {
+    .doc { margin: 0; padding: 24px 16px; border: 0; }
+    .doc-letterhead { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .doc-contact { text-align: left; }
+    .doc-meta, .doc-sign { grid-template-columns: 1fr; }
+}
