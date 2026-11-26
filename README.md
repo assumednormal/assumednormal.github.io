@@ -10,6 +10,7 @@ Static site for Assumed Normal LLC, Max Mitchell’s data science & AI advisory 
 | `services.html` | Engagement model, AI on-ramp, capabilities, who it’s for |
 | `about.html` | Bio, career timeline, approach |
 | `contact.html` | Contact details and next steps |
+| `austin.html` | Austin landing page for local search and Google Ads (not in the nav) |
 | `404.html` | Not-found page (uses root-absolute links) |
 | `css/theme.css` | **Brand theme**: colors, type, labels, lists, tables. Shared by site and documents |
 | `css/style.css` | Website layout (imports `theme.css`) |
