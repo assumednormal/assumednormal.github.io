@@ -14,7 +14,18 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css?v=2026110901">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Assumed Normal LLC", "alternateName": "assumednormal", "url": "https://www.assumednormal.com/", "email": "max@assumednormal.com", "logo": "https://www.assumednormal.com/assets/favicon.svg", "description": "Data science and AI advisory for small and medium-sized businesses.", "address": {"@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US"}, "founder": {"@type": "Person", "name": "Max Mitchell", "jobTitle": "Founder", "sameAs": ["https://www.linkedin.com/in/assumednormal/"]}}</script>
-    <!-- Google tag (gtag.js): paste the snippet from Google Ads here, on every page. -->
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MSC7CGCG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // Fire an "email_click" event when a visitor clicks a mailto: link (used as the Google Ads conversion).
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+        if (a) dataLayer.push({ event: 'email_click', link_url: a.href });
+      });
+    </script>
 </head>
 <body>
     <a class="skip" href="#main">Skip to content</a>
